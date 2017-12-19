@@ -9,7 +9,7 @@ var twitterKeys = {
 }
 module.exports = twitterKeys;
 
-var spotifyKeys = {
+/*var spotifyKeys = {
   id: '<e5f2da67f54748c891f1dd6828bac8c9>',
   secret: '<17856d40565b4f42b9dbe1496eb523f8>'
 }
@@ -18,5 +18,5 @@ module.exports = spotifyKeys;
 var omdbKey = {
   id: '<87cd8480>',
 }
-module.exports = omdbKey;
+module.exports = omdbKey;*/
 
