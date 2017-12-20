@@ -1,16 +1,16 @@
 var dataKeys = require("./keys.js");
 var fs = require('fs'); //file system
-var twitter = require('twitter');
+var Twitter = require('twitter');
+var twitterKeys = require('./keys.js');
+var client = new Twitter(twitterKeys);
+// var twitterKeys = 0 
 
-
-var twitterKeys = 0 
-
-var client = new twitter({
-  consumer_key: '<BfWjy3h518FwBnJJXQfDBBVer>',
-  consumer_secret: '<aDTpC8DPYRveqMwZzhleDewFogRSyhwDRBejpqBt80y7mOhPh9>',
-  access_token_key: '<59731143-NYT82LdFFJ1FkYNury4A9ZS9vEwdHB83pLVzbojKl>',
-  access_token_secret: '<WMAQqPG4NEa9Bkmc2sakr3vjF7K1MfxbhFjBgtyV7DKRM>',
-});
+// var client = new twitter({
+//   consumer_key: 'BfWjy3h518FwBnJJXQfDBBVer',
+//   consumer_secret: 'aDTpC8DPYRveqMwZzhleDewFogRSyhwDRBejpqBt80y7mOhPh9',
+//   access_token_key: '59731143-NYT82LdFFJ1FkYNury4A9ZS9vEwdHB83pLVzbojKl',
+//   access_token_secret: 'WMAQqPG4NEa9Bkmc2sakr3vjF7K1MfxbhFjBgtyV7DKRM',
+// });
 
 
 console.log(dataKeys);
@@ -68,7 +68,7 @@ function  getTweets() {
             for (var i = 0; i < tweets.length; i++) {
                 console.log('\n > ' + tweets[i].created_at + ': ' + tweets[i].text);
             }
-            goBack();
+ //           goBack();
         }
         //logs error
         else {
